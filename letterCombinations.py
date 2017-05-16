@@ -11,7 +11,7 @@ class Solution(object):
             return []
         if len(digits) == 1:
             return list(mapping[digits[0]])
-        
+        # Recursion
         first = self.letterCombinations(digits[:-1])
         last = mapping[digits[-1]]
         return [s + c for s in first for c in last]
